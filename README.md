@@ -6,40 +6,40 @@ In this lab you will develop a Product Review Application.
 ###  Requirements
 ---
 * Make domain models for
-	* `Category` with `id` and `name`.
-		* A `Category` can have many `Products`.
-	* `Product` with `id, name, price` and `rating`.
-		* A `Product` can belong to only one `Category`.
-		* A `Product` can have many `Reviews`.
-	* `User` with `id, email, password, firstName, lastname`.
-		* `User` can create many `Reviews`.
-		* `User` can have only one `Address`.
-	* `Address` with `id, street, zip` and `city`.
-		* An `Address` can belong to only one `User`. 
-	* `Review` with `id, comment`.
-		* A `Review` can only belong to one `User` and `Product`.
+	* ✅ `Category` with `id` and `name`.
+		* ✅ A `Category` can have many `Products`.
+	* ✅ `Product` with `id, name, price` and `rating`.
+		* ✅ A `Product` can belong to only one `Category`.
+		* ✅ A `Product` can have many `Reviews`.
+	* ✅ `User` with `id, email, password, firstName, lastname`.
+		* ✅ `User` can create many `Reviews`.
+		* ✅ `User` can have only one `Address`.
+	* ✅ `Address` with `id, street, zip` and `city`.
+		* ✅ An `Address` can belong to only one `User`. 
+	* ✅ `Review` with `id, comment`.
+	  * A ✅ `Review` can only belong to one `User` and `Product`.
 * Create entity relationship mappings as follows: (Creating a package for each requirement is advised.)
-	* Create them using `uni-directional`.
-	* Create them using `bi-directional`.
-	* Create `User` and `Review` mapping with  `Join Table`.
-	* Create `User` and `Review` mapping with  `Join Column`.
-	* Create `User` and `Address` mapping with  `Join Table`.
-	* Create `User` and `Address` mapping with  `Join Column`.
+	* ✅ Create them using `uni-directional`.
+	* ✅ Create them using `bi-directional`.
+	* ✅ Create `User` and `Review` mapping with  `Join Table`.
+	* ✅ Create `User` and `Review` mapping with  `Join Column`.
+	* ✅ Create `User` and `Address` mapping with  `Join Table`.
+	* ✅ Create `User` and `Address` mapping with  `Join Column`.
 
 * Implement CRUD operations and build REST API for all domain models.
 
 * Implement the following queries by using `Naming Convention` and `JPQL`. Create REST endpoints for them.
-	* Find all products that cost more than `minPrice`.
-	* Find all products in `cat` category and cost less than `maxPrice`.
-	* Find all products that contain `keyword` in the name.
-	* Find reviews of the product whose id is `id`. 
+	* ✅ Find all products that cost more than `minPrice`.
+	* ✅ Find all products in `cat` category and cost less than `maxPrice`.
+	* ✅ Find all products that contain `keyword` in the name.
+	* ✅ Find reviews of the product whose id is `id`. 
 
 ### Technical Details
 ---
-* Use n-tier software architecture model.
-* Use DTOs.
-* PostgreSQL is recommended as a Relational Database system.
-* Populate your database with dummy data using `data.sql`.
+* ✅ Use n-tier software architecture model.
+* ✅ Use DTOs.
+* ✅ PostgreSQL is recommended as a Relational Database system.
+* ✅ Populate your database with dummy data using `data.sql`.
 
 
 ## Submission
