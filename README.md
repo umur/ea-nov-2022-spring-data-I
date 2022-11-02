@@ -10,13 +10,14 @@ In this lab you will develop a Product Review Application.
 		* A `Category` can have many `Products`.
 	* `Product` with `id, name, price` and `rating`.
 		* A `Product` can belong to only one `Category`.
+		* A `Product` can have many `Reviews`.
 	* `User` with `id, email, password, firstName, lastname`.
 		* `User` can create many `Reviews`.
 		* `User` can have only one `Address`.
 	* `Address` with `id, street, zip` and `city`.
 		* An `Address` can belong to only one `User`. 
 	* `Review` with `id, comment`.
-		* A `Review` can only belong to one `User`.
+		* A `Review` can only belong to one `User` and `Product`.
 * Create entity relationship mappings as follows: (Creating a package for each requirement is advised.)
 	* Create them using `uni-directional`.
 	* Create them using `bi-directional`.
