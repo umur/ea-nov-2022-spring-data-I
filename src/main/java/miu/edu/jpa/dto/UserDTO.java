@@ -2,7 +2,6 @@ package miu.edu.jpa.dto;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import miu.edu.jpa.model.Address;
 
 @Data
 @RequiredArgsConstructor

@@ -6,7 +6,11 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
+
+import org.hibernate.Hibernate;
+
+import java.util.Objects;
+import java.util.Set;
 
 import static javax.persistence.CascadeType.ALL;
 
@@ -32,5 +36,18 @@ public class Product {
 //    @OneToMany(orphanRemoval = true)
 //    @JoinColumn(name="product_id", nullable = false)
     @ToString.Exclude
-    private List<Review> reviews;
+    private Set<Review> reviews;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Product product = (Product) o;
+        return id != null && Objects.equals(id, product.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
