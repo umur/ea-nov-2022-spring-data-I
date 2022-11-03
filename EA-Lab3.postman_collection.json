@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "db22833b-8968-428e-9d30-37ca8d610d58",
+		"name": "EA-Lab3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all products that cost more than minPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/filterByPrice?minPrice=1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"filterByPrice"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all products in cat category and cost less than maxPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/filterByCategoryAndPrice?category=Cat&price=10.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"filterByCategoryAndPrice"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Cat"
+						},
+						{
+							"key": "price",
+							"value": "10.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all products that contain keyword in the name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/filterByName?name=Phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"filterByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Phone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find reviews of the product whose id is id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/reviews/filter?productId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reviews",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
