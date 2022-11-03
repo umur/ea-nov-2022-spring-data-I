@@ -2,7 +2,6 @@ package com.example.lab3springdata.service;
 
 import com.example.lab3springdata.model.Product;
 import com.example.lab3springdata.repository.ProductRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,8 +9,11 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements IProductService {
 
-    @Autowired
-    private ProductRepo productRepo;
+    private final ProductRepo productRepo;
+
+    public ProductServiceImpl(ProductRepo productRepo) {
+        this.productRepo = productRepo;
+    }
 
     @Override
     public List<Product> findProductsByPrice(double minPrice) {
