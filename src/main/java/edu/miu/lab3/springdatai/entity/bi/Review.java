@@ -1,5 +1,6 @@
 package edu.miu.lab3.springdatai.entity.bi;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,8 +22,10 @@ public class Review {
     private String comment;
 
     @ManyToOne
+    @JsonBackReference
     private User user;
 
     @ManyToOne
+    @JsonBackReference
     private Product product;
 }

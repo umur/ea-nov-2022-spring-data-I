@@ -1,5 +1,6 @@
 package edu.miu.lab3.springdatai.entity.bi;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +23,7 @@ public class Address {
     private String zip;
     private String city;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "address")
     private User user;
 }

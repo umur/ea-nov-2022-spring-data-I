@@ -1,5 +1,6 @@
 package edu.miu.lab3.springdatai.entity.bi;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,6 +28,7 @@ public class User {
     @OneToOne
     private Address address;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 }
