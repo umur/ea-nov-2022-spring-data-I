@@ -54,4 +54,9 @@ public class ProductController {
     public List<Product> findProductsByPriceLessThanAndCategory(@RequestBody Category cat, @RequestParam double price){
         return productService.findProductsByPriceLessThanAndCategory(cat, price);
     }
+
+    @GetMapping("/filter_keyword")
+    public List<Product> findProductsByNameContainingIgnoreCase(String keyword) {
+        return productService.findProductsByNameContainingIgnoreCase(keyword);
+    }
 }

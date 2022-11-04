@@ -54,4 +54,9 @@ public class ProductService implements IProductService {
     public List<Product> findProductsByPriceLessThanAndCategory(Category cat, double price) {
         return null;
     }
+
+    @Override
+    public List<Product> findProductsByNameContainingIgnoreCase(String keyword) {
+        return productRepo.findProductsByNameContainingIgnoreCase(keyword);
+    }
 }

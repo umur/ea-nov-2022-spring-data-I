@@ -17,4 +17,7 @@ public interface IProductService {
 
     List<Product> findByPriceGreater(double price);
     List<Product> findProductsByPriceLessThanAndCategory(Category cat, double price);
+
+    List<Product> findProductsByNameContainingIgnoreCase(String keyword);
+
 }

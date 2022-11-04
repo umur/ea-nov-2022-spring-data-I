@@ -14,4 +14,6 @@ public interface ProductRepo extends CrudRepository<Product, Long> {
 
     List<Product> findProductsByPriceLessThanAndCategory(Category cat, double price);
 
+    List<Product> findProductsByNameContainingIgnoreCase(String keyword);
+
 }
