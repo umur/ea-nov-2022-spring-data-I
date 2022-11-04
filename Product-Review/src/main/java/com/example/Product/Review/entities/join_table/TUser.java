@@ -1,6 +1,5 @@
 package com.example.Product.Review.entities.join_table;
 
-import com.example.Product.Review.entities.Review;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -23,7 +22,7 @@ public class TUser {
             inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
             joinColumns = @JoinColumn(name = "rev_id", referencedColumnName = "id")
     )
-    private List<Review> reviews;
+    private List<TReview> reviews;
 
     @OneToOne(mappedBy = "user")
     private TAddress address;

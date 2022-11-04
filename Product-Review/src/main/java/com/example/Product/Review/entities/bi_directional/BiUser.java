@@ -1,7 +1,5 @@
 package com.example.Product.Review.entities.bi_directional;
 
-import com.example.Product.Review.entities.Address;
-import com.example.Product.Review.entities.Review;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,8 +17,8 @@ public class BiUser {
     private String lastName;
 
     @OneToMany(mappedBy = "user")
-    private List<Review> reviews;
+    private List<BiReview> reviews;
 
     @OneToOne(mappedBy = "user")
-    private Address address;
+    private BiAddress address;
 }

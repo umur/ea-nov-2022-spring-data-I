@@ -1,7 +1,5 @@
 package com.example.Product.Review.entities.bi_directional;
 
-import com.example.Product.Review.entities.Category;
-import com.example.Product.Review.entities.Review;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -21,8 +19,8 @@ public class BiProduct {
     private short rating;
 
     @ManyToOne
-    private Category category;
+    private BiCategory category;
 
     @OneToMany(mappedBy = "product")
-    private List<Review> reviews;
+    private List<BiReview> reviews;
 }

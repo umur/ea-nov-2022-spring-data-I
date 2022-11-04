@@ -1,6 +1,6 @@
 package com.example.Product.Review.entities.join_table;
 
-import com.example.Product.Review.entities.Product;
+import com.example.Product.Review.entities.join_column.Product;
 import lombok.Data;
 
 import javax.persistence.*;

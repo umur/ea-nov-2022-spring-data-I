@@ -1,6 +1,5 @@
 package com.example.Product.Review.entities.bi_directional;
 
-import com.example.Product.Review.entities.Product;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -17,5 +16,5 @@ public class BiCategory {
     private String comment;
 
     @OneToMany(mappedBy = "category")
-    private List<Product> products;
+    private List<BiProduct> products;
 }

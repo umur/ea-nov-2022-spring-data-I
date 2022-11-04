@@ -1,6 +1,5 @@
 package com.example.Product.Review.entities.bi_directional;
 
-import com.example.Product.Review.entities.User;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -18,5 +17,5 @@ public class BiAddress {
     private String city;
 
     @OneToOne
-    private User user;
+    private BiUser user;
 }
