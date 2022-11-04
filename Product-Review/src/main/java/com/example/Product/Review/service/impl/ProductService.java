@@ -1,5 +1,6 @@
 package com.example.Product.Review.service.impl;
 
+import com.example.Product.Review.entities.join_column.Category;
 import com.example.Product.Review.entities.join_column.Product;
 import com.example.Product.Review.repo.ProductRepo;
 import com.example.Product.Review.service.IProductService;
@@ -47,5 +48,10 @@ public class ProductService implements IProductService {
     @Override
     public List<Product> findByPriceGreater(double price) {
         return productRepo.findProductsByPriceGreaterThan(price);
+    }
+
+    @Override
+    public List<Product> findProductsByPriceLessThanAndCategory(Category cat, double price) {
+        return null;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.Product.Review.controller;
 
+import com.example.Product.Review.entities.join_column.Category;
 import com.example.Product.Review.entities.join_column.Product;
 import com.example.Product.Review.service.impl.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -47,5 +48,10 @@ public class ProductController {
     @GetMapping("/filter_greater_than")
     public List<Product> findByPriceGreater(@RequestParam double price) {
         return productService.findByPriceGreater(price);
+    }
+
+    @GetMapping("/filter")
+    public List<Product> findProductsByPriceLessThanAndCategory(@RequestBody Category cat, @RequestParam double price){
+        return productService.findProductsByPriceLessThanAndCategory(cat, price);
     }
 }
