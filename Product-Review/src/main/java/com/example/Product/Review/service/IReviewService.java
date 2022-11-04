@@ -13,4 +13,7 @@ public interface IReviewService {
     void update(Review review);
     void deleteById(long id);
     void delete(Review review);
+
+    List<Review> findReviewsByProductId(long id);
+
 }

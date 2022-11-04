@@ -43,4 +43,9 @@ public class ReviewService implements IReviewService {
     public void delete(Review review) {
         reviewRepo.delete(review);
     }
+
+    @Override
+    public List<Review> findReviewsByProductId(long id) {
+        return reviewRepo.findReviewsByProductId(id);
+    }
 }
