@@ -1,4 +1,4 @@
-package com.example.Product.Review.entities;
+package com.example.Product.Review.entities.join_column;
 
 import lombok.Data;
 
