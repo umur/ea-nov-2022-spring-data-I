@@ -1,6 +1,5 @@
 package com.example.springdata.entities.DTOs;
 
-import com.example.springdata.entities.User;
 import lombok.Data;
 
 

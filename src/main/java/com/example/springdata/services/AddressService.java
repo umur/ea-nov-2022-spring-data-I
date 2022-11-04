@@ -12,7 +12,9 @@ public interface AddressService {
 
     public List<AddressDTO> getAll();
 
+    public AddressDTO find(Long id);
+
     public AddressDTO update(Long id, AddressDTO addressDTO);
 
-    public String delete(Long id);
+    public AddressDTO delete(Long id);
 }

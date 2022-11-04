@@ -19,8 +19,8 @@ public class Product {
     private double price;
     private double rating;
 
-    @ManyToOne
-    @JoinColumn(name = "id_category") // optional
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_category")
     private Category category;
 
     @OneToMany(mappedBy = "product")

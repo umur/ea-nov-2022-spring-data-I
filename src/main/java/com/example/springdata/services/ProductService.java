@@ -12,7 +12,15 @@ public interface ProductService {
 
     public List<ProductDTO> getAll();
 
+    ProductDTO find(Long id);
+
     public ProductDTO update(Long id, ProductDTO productDTO);
 
-    public String delete(Long id);
+    public ProductDTO delete(Long id);
+
+    List<ProductDTO> findAllByPriceGreaterThan(double price);
+
+    List<ProductDTO> findAllByCategoryAndPriceLessThan(CategoryDTO categoryDTO, double price);
+
+    List<ProductDTO> findAllByNameContaining(String keyword);
 }

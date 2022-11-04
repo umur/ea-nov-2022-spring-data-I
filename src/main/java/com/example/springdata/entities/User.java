@@ -26,7 +26,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Review> reviews;
 
-    @OneToOne(fetch =FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(fetch =FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
     @JoinColumn(name = "id_address") // optional
     private Address address;

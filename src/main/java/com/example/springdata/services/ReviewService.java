@@ -1,6 +1,5 @@
 package com.example.springdata.services;
 
-import com.example.springdata.entities.DTOs.CategoryDTO;
 import com.example.springdata.entities.DTOs.ReviewDTO;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +11,11 @@ public interface ReviewService {
 
     public List<ReviewDTO> getAll();
 
+    ReviewDTO find(Long id);
+
     public ReviewDTO update(Long id, ReviewDTO reviewDTO);
 
-    public String delete(Long id);
+    public ReviewDTO delete(Long id);
+
+    List<ReviewDTO> findByProductId(Long id);
 }
