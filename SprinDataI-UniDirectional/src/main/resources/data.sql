@@ -1,0 +1,1 @@
+INSERT INTO product(id,name,price,rating) values (1,'name',23.0,'good')
