@@ -43,4 +43,9 @@ public class ProductService implements IProductService {
     public void delete(Product product) {
         productRepo.delete(product);
     }
+
+    @Override
+    public List<Product> findByPriceGreater(double price) {
+        return productRepo.findProductsByPriceGreaterThan(price);
+    }
 }

@@ -43,4 +43,9 @@ public class ProductController {
     public void deleteById(@PathVariable long id) {
         productService.deleteById(id);
     }
+
+    @GetMapping("/filter_greater_than")
+    public List<Product> findByPriceGreater(@RequestParam double price) {
+        return productService.findByPriceGreater(price);
+    }
 }
