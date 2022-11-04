@@ -1,5 +1,7 @@
 package com.example.lab3.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,8 @@ public class Review {
     private String comment;
 
     @ManyToOne
+    @JoinColumn(name = "product_id")
+//    @JsonManagedReference
     private Product product;
 
 //    @ManyToOne

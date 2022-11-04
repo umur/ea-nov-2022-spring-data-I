@@ -6,6 +6,8 @@ import com.example.lab3.model.Product;
 import java.util.List;
 
 public interface ProductService {
+
+    Product getById(Long id);
     List<Product> getAllProducts();
 
     List<Product> findProductByPriceGreaterThan(double minPrice);

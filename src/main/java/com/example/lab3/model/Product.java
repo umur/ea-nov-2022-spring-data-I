@@ -1,13 +1,16 @@
 package com.example.lab3.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +21,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "cat_id")
-    @JsonManagedReference
+    @JsonBackReference
     private Category category;
 
     @OneToMany(mappedBy = "product")

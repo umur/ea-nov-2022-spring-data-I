@@ -2,6 +2,7 @@ package com.example.lab3.controller;
 
 import com.example.lab3.model.Category;
 import com.example.lab3.model.Product;
+import com.example.lab3.model.Review;
 import com.example.lab3.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +36,11 @@ public class ProductController {
     @GetMapping("/search")
     public List<Product> getAllByNameContaining(@RequestParam String nameFilter){
         return productService.findAllByNameContaining(nameFilter);
+    }
+
+    @GetMapping("/{id}/reviews")
+    public List<Review> getReviews(@PathVariable Long id){
+        Product product = productService.getById(id);
+        return (List<Review>) product.getReviews();
     }
 }

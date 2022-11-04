@@ -18,6 +18,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Product getById(Long id) {
+        return productRepo.findById(id).get();
+    }
+
+    @Override
     public List<Product> getAllProducts() {
         return (List<Product>) productRepo.findAll();
     }
