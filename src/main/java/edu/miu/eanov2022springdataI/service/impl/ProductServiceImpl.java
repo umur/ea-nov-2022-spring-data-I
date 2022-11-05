@@ -4,9 +4,11 @@ import edu.miu.eanov2022springdataI.model.Product;
 import edu.miu.eanov2022springdataI.repository.ProductRepository;
 import edu.miu.eanov2022springdataI.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository productRepo;

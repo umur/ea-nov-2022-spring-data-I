@@ -4,9 +4,11 @@ import edu.miu.eanov2022springdataI.model.User;
 import edu.miu.eanov2022springdataI.repository.UserRepository;
 import edu.miu.eanov2022springdataI.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepo;

@@ -5,9 +5,11 @@ import edu.miu.eanov2022springdataI.repository.AddressRepository;
 import edu.miu.eanov2022springdataI.service.AddressService;
 import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AddressServiceImpl implements AddressService {
 
     @Autowired

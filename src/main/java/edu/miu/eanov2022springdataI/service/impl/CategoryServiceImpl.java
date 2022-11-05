@@ -4,9 +4,11 @@ import edu.miu.eanov2022springdataI.model.Category;
 import edu.miu.eanov2022springdataI.repository.CategoryRepository;
 import edu.miu.eanov2022springdataI.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryRepository categoryRepo;
