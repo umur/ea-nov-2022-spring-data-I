@@ -8,8 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
-@RequestMapping("/address/")
+@RequestMapping("/address")
 public class AddressController {
     @Autowired
     private AddressService addressService;
@@ -21,7 +23,10 @@ public class AddressController {
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable Long id) {
-        return new ResponseEntity<>(addressService.getById(id), HttpStatus.OK);
+        Optional<Address> address = addressService.getById(id);
+        if(address.isPresent()) return new ResponseEntity<>(address, HttpStatus.OK);
+
+        return new ResponseEntity<>("Data not found", HttpStatus.NOT_FOUND);
     }
 
     @PostMapping

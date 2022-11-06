@@ -3,11 +3,11 @@ package edu.miu.eanov2022springdataI.service.impl;
 import edu.miu.eanov2022springdataI.model.Address;
 import edu.miu.eanov2022springdataI.repository.AddressRepository;
 import edu.miu.eanov2022springdataI.service.AddressService;
-import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AddressServiceImpl implements AddressService {
@@ -21,8 +21,8 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public Address getById(long id) {
-        return addressRepo.getReferenceById(id);
+    public Optional<Address> getById(long id) {
+        return addressRepo.findById(id);
     }
 
     @Override
@@ -32,12 +32,12 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public Address updateById(long id, Address address) {
-        Address newAddress = new Address();
+        Address newAddress = addressRepo.getReferenceById(id);
         newAddress.setCity(address.getCity());
         newAddress.setZip(address.getZip());
         newAddress.setUser(address.getUser());
         newAddress.setStreet(address.getStreet());
-        return newAddress;
+        return addressRepo.save(newAddress);
     }
 
     @Override

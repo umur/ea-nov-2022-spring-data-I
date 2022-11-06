@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {
@@ -19,8 +20,8 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public Review getById(long id) {
-        return reviewRepo.getReferenceById(id);
+    public Optional<Review> getById(long id) {
+        return reviewRepo.findById(id);
     }
 
     @Override
