@@ -14,14 +14,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product",
+							"raw": "http://localhost:8080/products",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product"
+								"products"
 							]
 						}
 					},
@@ -42,14 +42,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/product/save",
+							"raw": "http://localhost:8080/products/save",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
+								"products",
 								"save"
 							]
 						}
@@ -62,15 +62,21 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/2",
+							"raw": "http://localhost:8080/products/name?=m",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
-								"2"
+								"products",
+								"name"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "m"
+								}
 							]
 						}
 					},
@@ -82,14 +88,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/delete/id",
+							"raw": "http://localhost:8080/products/delete/id",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
+								"products",
 								"delete",
 								"id"
 							]
@@ -103,14 +109,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/maxPrice/?maxPrice=35.0",
+							"raw": "http://localhost:8080/products/maxPrice/?maxPrice=35.0",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
+								"products",
 								"maxPrice",
 								""
 							],
@@ -130,14 +136,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/minPrice/?minPrice=25.0",
+							"raw": "http://localhost:8080/products/minPrice/?minPrice=25.0",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
+								"products",
 								"minPrice",
 								""
 							],
@@ -157,21 +163,21 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/name/?name=mango",
+							"raw": "http://localhost:8080/products/name/?name=Mango",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
+								"products",
 								"name",
 								""
 							],
 							"query": [
 								{
 									"key": "name",
-									"value": "mango"
+									"value": "Mango"
 								}
 							]
 						}
@@ -184,14 +190,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/product/review/?id=2",
+							"raw": "http://localhost:8080/products/review/?id=2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"product",
+								"products",
 								"review",
 								""
 							],
@@ -216,14 +222,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/category",
+							"raw": "http://localhost:8080/categories",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"category"
+								"categories"
 							]
 						}
 					},
@@ -235,14 +241,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/category/save",
+							"raw": "http://localhost:8080/categories/save",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"category",
+								"categories",
 								"save"
 							]
 						}
@@ -255,14 +261,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/category/2",
+							"raw": "http://localhost:8080/categories/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"category",
+								"categories",
 								"2"
 							]
 						}
@@ -275,14 +281,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/category/delete/id",
+							"raw": "http://localhost:8080/categories/delete/id",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"category",
+								"categories",
 								"delete",
 								"id"
 							]
@@ -301,14 +307,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/review",
+							"raw": "http://localhost:8080/reviews",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"review"
+								"reviews"
 							]
 						}
 					},
@@ -320,14 +326,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/review/save",
+							"raw": "http://localhost:8080/reviews/save",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"review",
+								"reviews",
 								"save"
 							]
 						}
@@ -340,14 +346,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/review/1",
+							"raw": "http://localhost:8080/reviews/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"review",
+								"reviews",
 								"1"
 							]
 						}
@@ -360,13 +366,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/delete/id",
+							"raw": "http://localhost:8080/reviews/delete/id",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"reviews",
 								"delete",
 								"id"
 							]
@@ -385,14 +392,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/user",
+							"raw": "http://localhost:8080/users",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"user"
+								"users"
 							]
 						}
 					},
@@ -413,14 +420,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/user/save",
+							"raw": "http://localhost:8080/users/save",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"user",
+								"users",
 								"save"
 							]
 						}
@@ -433,14 +440,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/user/1",
+							"raw": "http://localhost:8080/users/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"user",
+								"users",
 								"1"
 							]
 						}
@@ -453,14 +460,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/user/delete/1",
+							"raw": "http://localhost:8080/users/delete/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"user",
+								"users",
 								"delete",
 								"1"
 							]
@@ -479,14 +486,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/address",
+							"raw": "http://localhost:8080/addresses",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"address"
+								"addresses"
 							]
 						}
 					},
@@ -498,14 +505,14 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/address/save",
+							"raw": "http://localhost:8080/addresses/save",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"address",
+								"addresses",
 								"save"
 							]
 						}
@@ -518,14 +525,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/address/2",
+							"raw": "http://localhost:8080/addresses/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"address",
+								"addresses",
 								"2"
 							]
 						}
@@ -538,14 +545,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/address/delete/id",
+							"raw": "http://localhost:8080/addresses/delete/id",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"address",
+								"addresses",
 								"delete",
 								"id"
 							]
