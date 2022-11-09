@@ -19,7 +19,7 @@ public class User {
 
     //bidirectional
     @OneToOne(mappedBy = "user")
-    @JoinColumn
+//    @JoinColumn
     private Address address;
 
     @OneToMany(mappedBy = "user")

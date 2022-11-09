@@ -12,7 +12,7 @@ public interface ProductService {
     Product updateProduct(Product product);
     Product getById(Long id);
     void deleteProduct(Long id);
-    List<Product> getAll();
+    List<Product> getAllProducts();
      List<Product> findProductsByPriceIsGreaterThan(double minPrice);
      List<Product> findProductsByPriceIsLessThan(double maxPrice);
     List<Product> findProductsByNameIsLikeIgnoreCase(String name);

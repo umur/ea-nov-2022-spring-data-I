@@ -38,10 +38,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAll() {
-        List<Product> productList=new ArrayList<>();
-        productRepository.findAll().forEach(productList::add);
-        return productList;
+    public List<Product> getAllProducts() {
+
+        return (List<Product>) productRepository.findAll();
+//        List<Product> productList=new ArrayList<>();
+//        productRepository.findAll().forEach(productList::add);
+//        return productList;
     }
     public List<Product> findProductsByPriceIsGreaterThan(double minPrice) {
         return productRepository.findProductsByPriceIsGreaterThan(minPrice);

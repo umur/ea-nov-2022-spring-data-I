@@ -18,7 +18,8 @@ public class ProductController {
 
     @GetMapping
     public List<Product> getProduct() {
-        return productService.getAll();
+
+        return productService.getAllProducts();
     }
 
     @PostMapping("/save")
