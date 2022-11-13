@@ -1,6 +1,7 @@
 package com.miu.edu.spring.data.service;
 
 
+import com.miu.edu.spring.data.dto.AddressDto;
 import com.miu.edu.spring.data.dto.UserDto;
 
 import java.util.List;
@@ -22,16 +23,24 @@ public interface UserService {
     UserDto getUserById(int id);
 
     /**
+     * Get Address by user id
+     * @param id
+     * @return AddressDto
+     */
+    AddressDto getAddressByUserId(int id);
+
+    /**
      * Update a User
+     * param id
      * @param user
      */
-    void updateUser(UserDto user);
+    void updateUser(int id, UserDto user);
 
     /**
      * Add a User
      * @param user
      */
-    void addUser(UserDto user);
+    UserDto addUser(UserDto user);
 
     /**
      * Remove a User by id

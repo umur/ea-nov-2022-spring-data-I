@@ -25,16 +25,16 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void updateCategory(CategoryDto category) {
-        categoryRepository.findById(category.getId()).ifPresent(c -> {
+    public void updateCategory(int id, CategoryDto category) {
+        categoryRepository.findById(id).ifPresent(c -> {
             c.setName(category.getName());
             categoryRepository.save(c);
         });
     }
 
     @Override
-    public void addCategory(CategoryDto category) {
-        categoryRepository.save(CategoryDto.convertTo(category));
+    public CategoryDto addCategory(CategoryDto categoryDto) {
+        return CategoryDto.convertFrom(categoryRepository.save(CategoryDto.convertTo(categoryDto)));
     }
 
     @Override

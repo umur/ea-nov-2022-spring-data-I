@@ -7,6 +7,7 @@ import com.miu.edu.spring.data.repository.ProductRepository;
 import com.miu.edu.spring.data.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -40,8 +41,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void updateProduct(ProductDto product) {
-        productRepository.findById(product.getId()).ifPresent(p -> {
+    public void updateProduct(int id, ProductDto product) {
+        productRepository.findById(id).ifPresent(p -> {
             p.setName(product.getName());
             p.setPrice(product.getPrice());
             p.setRating(product.getRating());
@@ -49,9 +50,10 @@ public class ProductServiceImpl implements ProductService {
         });
     }
 
+    @Transactional
     @Override
-    public void addProduct(ProductDto product) {
-        productRepository.save(ProductDto.convertTo(product));
+    public ProductDto addProduct(ProductDto productDto) {
+        return ProductDto.convertFrom(productRepository.save(ProductDto.convertTo(productDto)));
     }
 
     @Override
@@ -69,6 +71,13 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductDto> findProductsByCategoryIdAndPriceLessThanEqual(int id, Double maxPrice) {
         return productRepository.findProductsByCategory_IdAndPriceLessThanEqual(id, maxPrice).stream()
+                .map(ProductDto::convertFrom)
+                .toList();
+    }
+
+    @Override
+    public List<ProductDto> findProductByPriceGreaterThanEqualAndNameContainingIgnoreCase(Double price, String name) {
+        return productRepository.findProductByPriceGreaterThanEqualAndNameContainingIgnoreCase(price, name).stream()
                 .map(ProductDto::convertFrom)
                 .toList();
     }

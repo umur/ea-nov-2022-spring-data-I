@@ -2,7 +2,6 @@ package com.miu.edu.spring.data.dto;
 
 import com.miu.edu.spring.data.entity.Category;
 import com.miu.edu.spring.data.entity.Product;
-import com.miu.edu.spring.data.entity.Review;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
